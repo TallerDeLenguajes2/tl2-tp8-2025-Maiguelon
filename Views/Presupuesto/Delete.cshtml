@@ -1,0 +1,16 @@
+@model presupuestario.Presupuesto
+@* ... (Title, mensaje de confirmación) ... *@
+
+<dl class="row">
+    <dt class="col-sm-2">ID:</dt>
+    <dd class="col-sm-10">@Model.IdPresupuesto</dd>
+    <dt class="col-sm-2">Destinatario:</dt>
+    <dd class="col-sm-10">@Model.NombreDestinatario</dd>
+</dl>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="IdPresupuesto" /> 
+
+    <input type="submit" value="Confirmar Eliminación" class="btn btn-danger" /> 
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

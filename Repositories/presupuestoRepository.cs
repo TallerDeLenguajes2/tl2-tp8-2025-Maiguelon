@@ -188,4 +188,30 @@ public class PresupuestoRepository
         }
         return filasAfectadas > 0;
     }
+
+    public bool ModificarPresupuesto(Presupuesto presupuesto)
+    {
+        int filasAfectadas = 0;
+        using (var connection = new SqliteConnection(connectionString))
+        {
+            connection.Open();
+            string sql =
+                @"UPDATE Presupuestos SET 
+            NombreDestinatario = @nom, 
+            FechaCreacion = @fec 
+            WHERE IdPresupuesto = @id";
+
+            using (var command = new SqliteCommand(sql, connection))
+            {
+                command.Parameters.AddWithValue("@id", presupuesto.IdPresupuesto);
+                command.Parameters.AddWithValue("@nom", presupuesto.NombreDestinatario);
+                command.Parameters.AddWithValue("@fec", presupuesto.FechaCreacion);
+
+                filasAfectadas = command.ExecuteNonQuery();
+            }
+        }
+        // Devuelve true si se afectó al menos una fila (la actualización fue exitosa)
+        return filasAfectadas > 0;
+    }
 }
+

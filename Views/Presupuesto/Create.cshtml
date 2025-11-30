@@ -1,0 +1,17 @@
+@model presupuestario.Presupuesto
+
+<form asp-action="Create" method="post">
+    
+    <div class="form-group">
+        <label asp-for="NombreDestinatario"></label>
+        <input asp-for="NombreDestinatario" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="FechaCreacion"></label>
+        <input asp-for="FechaCreacion" class="form-control" type="date" />
+    </div> 
+
+    <div class="form-group mt-3">
+        <input type="submit" value="Guardar Presupuesto" class="btn btn-primary" />
+    </div>
+</form>

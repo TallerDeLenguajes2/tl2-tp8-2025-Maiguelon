@@ -4,26 +4,33 @@
     ViewData["Title"] = "Listado de Presupuestos";
 }
 
-<div class="container mt-4">
-    <h1 class="text-center">@ViewData["Title"]</h1>
+<h1 class="text-center">@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Crear Nuevo Presupuesto</a> 
+</p>
+
+<div class="w-50 mx-auto">
     <table class="table table-striped text-center">
         <thead>
             <tr>
                 <th>ID</th>
                 <th>Destinatario</th>
                 <th>Fecha</th>
-                <th>Acciones</th>
+                <th>Acciones</th>  @* <-- Agrega esta columna *@
             </tr>
         </thead>
         <tbody>
-            @foreach (var p in Model)
+            @foreach (var p in Model) 
             {
                 <tr>
                     <td>@p.IdPresupuesto</td>
                     <td>@p.NombreDestinatario</td>
-                    <td>@p.FechaCreacion.ToShortDateString()</td>
+                    <td>@p.FechaCreacion</td>
                     <td>
-                        <a asp-action="Detalle" asp-route-id="@p.IdPresupuesto" class="btn btn-sm btn-info">Ver Detalle</a>
+                        <a asp-action="Detalle" asp-route-id="@p.IdPresupuesto" class="btn btn-sm btn-info">Detalle</a> |
+                        <a asp-action="Edit" asp-route-id="@p.IdPresupuesto" class="btn btn-sm btn-warning">Editar</a> |
+                        <a asp-action="Delete" asp-route-id="@p.IdPresupuesto" class="btn btn-sm btn-danger">Eliminar</a>
                     </td>
                 </tr>
             }
