@@ -1,21 +1,23 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using tl2_tp8_2025_Maiguelon.Models;
+using presupuestario;
 
 namespace tl2_tp8_2025_Maiguelon.Controllers;
 
 public class ProductoController : Controller
 {
-    //private readonly ILogger<ProductoController> _logger;
-
+    private ProductoRepository productoRepository;
     public ProductoController()
     {
-       // _logger = logger;
+        productoRepository = new ProductoRepository();
     }
 
+    [HttpGet]
     public IActionResult Index()
     {
-        return View();
+        List<Producto> productos = productoRepository.Listar();
+        return View(productos);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
