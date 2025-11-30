@@ -4,28 +4,39 @@
     ViewData["Title"] = "Listado de Productos";
 }
 
-<div class="container mt-4">
-    <h1 class="text-center">@ViewData["Title"]</h1>
-    
-    <div class="w-50 mx-auto">
-        <table class="table table-striped text-center">
-            <thead>
+<h1 class="text-center">@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Crear Nuevo Producto</a>
+</p>
+
+<div class="w-50 mx-auto">
+    <table class="table table-striped text-center">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Modificar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var p in Model)
+            {
                 <tr>
-                    <th>ID</th>
-                    <th>Descripción</th>
-                    <th>Precio</th>
+                    <td>@p.IdProducto</td>
+                    <td>@p.Descripcion</td>
+                    <td>@p.Precio</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@p.IdProducto" class="btn btn-sm btn-warning">Editar</a>
+                    </td>
+                    <td>
+                        <a asp-action="Delete" asp-route-id="@p.IdProducto" class="btn btn-sm btn-danger">Eliminar</a>
+                    </td>
                 </tr>
-            </thead>
-            <tbody>
-                @foreach (var p in Model) 
-                {
-                    <tr>
-                        <td>@p.IdProducto</td>
-                        <td>@p.Descripcion</td>
-                        <td>@p.Precio</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
+            }
+        </tbody>
+    </table>
+</div>
 </div>

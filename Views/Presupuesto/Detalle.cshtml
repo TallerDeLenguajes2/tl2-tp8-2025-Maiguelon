@@ -1,0 +1,44 @@
+@model presupuestario.Presupuesto
+
+@{
+    ViewData["Title"] = $"Detalle Presupuesto #{Model.IdPresupuesto}";
+}
+
+<h1>Detalle del Presupuesto #@Model.IdPresupuesto</h1>
+<hr>
+
+<dl class="row">
+    <dt class="col-sm-2">Destinatario:</dt>
+    <dd class="col-sm-10">@Model.NombreDestinatario</dd>
+
+    <dt class="col-sm-2">Fecha:</dt>
+    <dd class="col-sm-10">@Model.FechaCreacion.ToShortDateString()</dd>
+
+    <dt class="col-sm-2">Monto Total (sin IVA):</dt>
+    <dd class="col-sm-10">@Model.MontoPresupuesto().ToString("C")</dd>
+</dl>
+
+<h3>Productos Incluidos</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Precio Unitario</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Detalle!) // ! si la lista puede ser null
+        {
+            <tr>
+                <td>@item.Producto!.Descripcion</td>
+                <td>@item.Producto.Precio.ToString("C")</td>
+                <td>@item.Cantidad</td>
+                <td>@((item.Cantidad * item.Producto.Precio).ToString("C"))</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Index" class="btn btn-secondary">Volver al Listado</a>

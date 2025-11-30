@@ -24,4 +24,15 @@ public class PresupuestoController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+
+    public IActionResult Detalle(int id)
+    {
+        Presupuesto presupuesto = presupuestoRepository.ObtenerPresupuestoPorId(id);
+
+        if (presupuesto == null)
+        {
+            return NotFound();
+        }
+        return View(presupuesto);
+    }
 }

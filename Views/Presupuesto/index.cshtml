@@ -6,26 +6,27 @@
 
 <div class="container mt-4">
     <h1 class="text-center">@ViewData["Title"]</h1>
-    
-    <div class="w-50 mx-auto">
-        <table class="table table-striped text-center">
-            <thead>
+    <table class="table table-striped text-center">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Destinatario</th>
+                <th>Fecha</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var p in Model)
+            {
                 <tr>
-                    <th>ID</th>
-                    <th>Destinatario</th>
-                    <th>Fecha</th>
+                    <td>@p.IdPresupuesto</td>
+                    <td>@p.NombreDestinatario</td>
+                    <td>@p.FechaCreacion.ToShortDateString()</td>
+                    <td>
+                        <a asp-action="Detalle" asp-route-id="@p.IdPresupuesto" class="btn btn-sm btn-info">Ver Detalle</a>
+                    </td>
                 </tr>
-            </thead>
-            <tbody>
-                @foreach (var p in Model) 
-                {
-                    <tr>
-                        <td>@p.IdPresupuesto</td>
-                        <td>@p.NombreDestinatario</td>
-                        <td>@p.FechaCreacion</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
+            }
+        </tbody>
+    </table>
 </div>

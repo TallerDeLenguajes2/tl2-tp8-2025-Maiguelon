@@ -1,0 +1,29 @@
+@model presupuestario.Producto // Espera un modelo vacío, solo para estructura
+
+@{
+    ViewData["Title"] = "Crear Producto";
+}
+
+<h2>Crear Producto</h2>
+<hr />
+
+<form asp-controller="Producto" asp-action="Create" method="post">
+
+    <div class="form-group">
+        <label asp-for="Descripcion"></label>
+        <input asp-for="Descripcion" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Precio"></label>
+        <input asp-for="Precio" class="form-control" />
+    </div>
+
+    <div class="form-group mt-3">
+        <input type="submit" value="Guardar" class="btn btn-primary" />
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Volver al listado</a>
+</div>
