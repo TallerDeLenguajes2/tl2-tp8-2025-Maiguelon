@@ -4,7 +4,7 @@ namespace presupuestario
     public class Producto
     {
         private int idProducto;
-        private string? descripcion;
+        private string descripcion;
         private int precio;
 
         public int IdProducto { get => idProducto; set => idProducto = value; }
