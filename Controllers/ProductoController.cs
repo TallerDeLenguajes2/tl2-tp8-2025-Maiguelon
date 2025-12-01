@@ -3,15 +3,19 @@ using Microsoft.AspNetCore.Mvc;
 using tl2_tp8_2025_Maiguelon.Models;
 using presupuestario;
 using tl2_tp8_2025_Maiguelon.ViewModels;
+using tl2_tp8_2025_Maiguelon.Interfaces;
 
 namespace tl2_tp8_2025_Maiguelon.Controllers;
 
 public class ProductoController : Controller
 {
-    private ProductoRepository productoRepository;
-    public ProductoController()
+    private readonly IProductoRepository productoRepository;
+
+    // Se inyecta la dependencia por el constructor
+    public ProductoController(IProductoRepository productoRepository)
     {
-        productoRepository = new ProductoRepository();
+        // Ya no hacemos 'new ProductoRepository()', lo recibimos listo para usar.
+        this.productoRepository = productoRepository;
     }
 
     [HttpGet]
@@ -133,7 +137,7 @@ public class ProductoController : Controller
     // Es necesario cambiar el name solo aquí porque es el único método que recibe los mismos parámetros
     public IActionResult DeleteConfirmed(int id) 
     {
-        bool eliminado = productoRepository.eliminarProducto(id);
+        bool eliminado = productoRepository.EliminarProducto(id);
 
         if (!eliminado)
         {

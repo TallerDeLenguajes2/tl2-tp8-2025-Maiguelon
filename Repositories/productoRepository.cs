@@ -1,7 +1,8 @@
 using Microsoft.Data.Sqlite;
 using presupuestario;
+using tl2_tp8_2025_Maiguelon.Interfaces;
 
-public class ProductoRepository
+public class ProductoRepository : IProductoRepository
 {
     // Cadena de conexión para SQLite
     private string connectionString = "Data Source=db/tiendadb.db";
@@ -115,7 +116,7 @@ public class ProductoRepository
         return product;
     }
 
-    public bool eliminarProducto(int ide)
+    public bool EliminarProducto(int ide)
     {
         int filaAfectada = 0;
         using (var connection = new SqliteConnection(connectionString))

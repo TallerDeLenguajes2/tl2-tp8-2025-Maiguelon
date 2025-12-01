@@ -1,7 +1,8 @@
 using Microsoft.Data.Sqlite;
 using presupuestario;
+using tl2_tp8_2025_Maiguelon.Interfaces;
 
-public class PresupuestoRepository
+public class PresupuestoRepository : IPresupuestoRepository
 {
     // Cadena de conexión para SQLite
     private string connectionString = "Data Source=db/tiendadb.db";

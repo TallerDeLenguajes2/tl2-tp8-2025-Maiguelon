@@ -4,18 +4,20 @@ using tl2_tp8_2025_Maiguelon.Models;
 using presupuestario;
 using tl2_tp8_2025_Maiguelon.ViewModels;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using tl2_tp8_2025_Maiguelon.Interfaces;
 
 namespace tl2_tp8_2025_Maiguelon.Controllers;
 
 public class PresupuestoController : Controller
 {
-    private PresupuestoRepository presupuestoRepository;
-    private ProductoRepository productoRepository; // agrego producto
+    private readonly IPresupuestoRepository presupuestoRepository;
+    private readonly IProductoRepository productoRepository; 
 
-    public PresupuestoController()
+    // 2. Inyectamos AMBOS por el constructor
+    public PresupuestoController(IPresupuestoRepository presupuestoRepo, IProductoRepository productoRepo)
     {
-        presupuestoRepository = new PresupuestoRepository();
-        productoRepository = new ProductoRepository();
+        this.presupuestoRepository = presupuestoRepo;
+        this.productoRepository = productoRepo;
     }
 
     public IActionResult Index()
