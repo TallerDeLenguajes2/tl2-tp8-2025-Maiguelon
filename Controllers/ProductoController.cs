@@ -2,6 +2,7 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using tl2_tp8_2025_Maiguelon.Models;
 using presupuestario;
+using tl2_tp8_2025_Maiguelon.ViewModels;
 
 namespace tl2_tp8_2025_Maiguelon.Controllers;
 
@@ -27,48 +28,88 @@ public class ProductoController : Controller
     }
 
 
-    // GET: Producto/Create (Muestra el formulario vacío)
+    // -----------------------------------------------------------------
+    // C R E A T E (ALTA) - Refactorizado con ViewModel
+    // -----------------------------------------------------------------
+
+    // GET: Producto/Create (Muestra el formulario)
+    [HttpGet]
     public IActionResult Create()
     {
-        // Simplemente devuelve una vista sin modelo, porque el formulario estará vacío.
-        return View();
+        // Envía un ViewModel vacío al formulario.
+        return View(new ProductoViewModel()); 
     }
 
-    // POST: Producto/Create (Recibe el formulario y guarda)
+    // POST: Producto/Create (Recibe el ViewModel)
     [HttpPost]
-    public IActionResult Create(Producto producto)
+    public IActionResult Create(ProductoViewModel productoVM)
     {
-        // Llama al repositorio para guardar el nuevo producto
-        productoRepository.Alta(producto);
+        // 1. CHEQUEO DE VALIDACIÓN: Si el modelo es inválido (ej. precio negativo), 
+        // regresa a la vista para mostrar los errores definidos en el VM.
+        if (!ModelState.IsValid) 
+        {
+            return View(productoVM);
+        }
 
-        // Redirecciona al listado para mostrar el resultado (Patrón Post-Redirect-Get)
+        // 2. MAPPING (VM -> Model de Dominio)
+        // Convertimos el objeto seguro y validado (VM) a nuestro objeto de persistencia (Model).
+        Producto nuevoProducto = new Producto
+        {
+            Descripcion = productoVM.Descripcion,
+            // (Ajusta el casteo si el tipo de Precio en Producto.cs es diferente a decimal)
+            Precio = (int)productoVM.Precio 
+        };
+
+        // 3. Persistencia
+        productoRepository.Alta(nuevoProducto); 
+
         return RedirectToAction(nameof(Index));
     }
 
-    // GET: Producto/Edit/5 (Muestra el formulario con los datos cargados)
+   // -----------------------------------------------------------------
+    // E D I T (EDICIÓN) - Refactorizado con ViewModel
+    // -----------------------------------------------------------------
+
+    // GET: Producto/Edit/5 (Carga el formulario)
     [HttpGet]
     public IActionResult Edit(int id)
     {
-        // 1. Buscar el producto por ID en el Repositorio
-        Producto productoAEditar = productoRepository.obtenerProducto(id);
+        Producto productoAEditar = productoRepository.obtenerProducto(id); 
 
-        if (productoAEditar == null)
+        if (productoAEditar == null) return NotFound(); 
+
+        // 1. MAPPING (Model de Dominio -> VM) para llenar el formulario
+        ProductoViewModel productoVM = new ProductoViewModel
         {
-            return NotFound();
-        }
+            IdProducto = productoAEditar.IdProducto,
+            Descripcion = productoAEditar.Descripcion,
+            Precio = productoAEditar.Precio
+        };
 
-        // 2. Si existe, enviar el objeto a la vista Edit.cshtml
-        return View(productoAEditar);
+        return View(productoVM);
     }
 
-    // POST: Producto/Edit (Recibe el formulario modificado y guarda)
+    // POST: Producto/Edit (Recibe el ViewModel modificado)
     [HttpPost]
-    public IActionResult Edit(Producto producto)
+    public IActionResult Edit(ProductoViewModel productoVM)
     {
-        // 1. Llamar al repositorio para ejecutar el UPDATE
-        productoRepository.Modificar(producto.IdProducto, producto);
+        // 1. CHEQUEO DE VALIDACIÓN
+        if (!ModelState.IsValid) 
+        {
+            return View(productoVM);
+        }
 
-        // 2. Redirigir al listado
+        // 2. MAPPING (VM -> Model de Dominio)
+        Producto productoModificado = new Producto
+        {
+            IdProducto = productoVM.IdProducto, 
+            Descripcion = productoVM.Descripcion,
+            Precio = (int)productoVM.Precio
+        };
+
+        // 3. Persistencia
+        productoRepository.Modificar(productoModificado.IdProducto, productoModificado);
+
         return RedirectToAction(nameof(Index));
     }
 

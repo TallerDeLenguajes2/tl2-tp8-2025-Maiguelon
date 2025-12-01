@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EmRUz4BRyV0=",
+  "dgSpecHash": "yFe1lil0h7I=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Cc-nta Software\\Desktop\\facultad\\Taller2_nuevo\\TP-8\\tl2-tp8-2025-Maiguelon\\tl2-tp8-2025-Maiguelon.csproj",
+  "projectFilePath": "C:\\Users\\Cc-nta Software\\Desktop\\facultad\\Taller2_nuevo\\TP-8-9\\tl2-tp8-2025-Maiguelon\\tl2-tp8-2025-Maiguelon.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Cc-nta Software\\.nuget\\packages\\microsoft.data.sqlite\\10.0.0\\microsoft.data.sqlite.10.0.0.nupkg.sha512",
     "C:\\Users\\Cc-nta Software\\.nuget\\packages\\microsoft.data.sqlite.core\\10.0.0\\microsoft.data.sqlite.core.10.0.0.nupkg.sha512",

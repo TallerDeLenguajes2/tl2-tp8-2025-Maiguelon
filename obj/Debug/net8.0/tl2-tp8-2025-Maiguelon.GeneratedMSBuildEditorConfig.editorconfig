@@ -9,75 +9,79 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = tl2_tp8_2025_Maiguelon
 build_property.RootNamespace = tl2_tp8_2025_Maiguelon
-build_property.ProjectDir = C:\Users\Cc-nta Software\Desktop\facultad\Taller2_nuevo\TP-8\tl2-tp8-2025-Maiguelon\
+build_property.ProjectDir = C:\Users\Cc-nta Software\Desktop\facultad\Taller2_nuevo\TP-8-9\tl2-tp8-2025-Maiguelon\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Cc-nta Software\Desktop\facultad\Taller2_nuevo\TP-8\tl2-tp8-2025-Maiguelon
+build_property.MSBuildProjectDirectory = C:\Users\Cc-nta Software\Desktop\facultad\Taller2_nuevo\TP-8-9\tl2-tp8-2025-Maiguelon
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8/tl2-tp8-2025-Maiguelon/Views/Home/Index.cshtml]
+[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8-9/tl2-tp8-2025-Maiguelon/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8/tl2-tp8-2025-Maiguelon/Views/Home/Privacy.cshtml]
+[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8-9/tl2-tp8-2025-Maiguelon/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8/tl2-tp8-2025-Maiguelon/Views/Presupuesto/Create.cshtml]
+[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8-9/tl2-tp8-2025-Maiguelon/Views/Presupuesto/AgregarProducto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3VwdWVzdG9cQWdyZWdhclByb2R1Y3RvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8-9/tl2-tp8-2025-Maiguelon/Views/Presupuesto/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3VwdWVzdG9cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8/tl2-tp8-2025-Maiguelon/Views/Presupuesto/Delete.cshtml]
+[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8-9/tl2-tp8-2025-Maiguelon/Views/Presupuesto/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3VwdWVzdG9cRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8/tl2-tp8-2025-Maiguelon/Views/Presupuesto/Detalle.cshtml]
+[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8-9/tl2-tp8-2025-Maiguelon/Views/Presupuesto/Detalle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3VwdWVzdG9cRGV0YWxsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8/tl2-tp8-2025-Maiguelon/Views/Presupuesto/Edit.cshtml]
+[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8-9/tl2-tp8-2025-Maiguelon/Views/Presupuesto/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3VwdWVzdG9cRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8/tl2-tp8-2025-Maiguelon/Views/Presupuesto/index.cshtml]
+[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8-9/tl2-tp8-2025-Maiguelon/Views/Presupuesto/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlc3VwdWVzdG9caW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8/tl2-tp8-2025-Maiguelon/Views/Producto/Create.cshtml]
+[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8-9/tl2-tp8-2025-Maiguelon/Views/Producto/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8/tl2-tp8-2025-Maiguelon/Views/Producto/Delete.cshtml]
+[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8-9/tl2-tp8-2025-Maiguelon/Views/Producto/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8/tl2-tp8-2025-Maiguelon/Views/Producto/Edit.cshtml]
+[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8-9/tl2-tp8-2025-Maiguelon/Views/Producto/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9cRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8/tl2-tp8-2025-Maiguelon/Views/Producto/index.cshtml]
+[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8-9/tl2-tp8-2025-Maiguelon/Views/Producto/index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdG9caW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8/tl2-tp8-2025-Maiguelon/Views/Shared/Error.cshtml]
+[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8-9/tl2-tp8-2025-Maiguelon/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8/tl2-tp8-2025-Maiguelon/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8-9/tl2-tp8-2025-Maiguelon/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8/tl2-tp8-2025-Maiguelon/Views/_ViewImports.cshtml]
+[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8-9/tl2-tp8-2025-Maiguelon/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8/tl2-tp8-2025-Maiguelon/Views/_ViewStart.cshtml]
+[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8-9/tl2-tp8-2025-Maiguelon/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8/tl2-tp8-2025-Maiguelon/Views/Shared/_Layout.cshtml]
+[C:/Users/Cc-nta Software/Desktop/facultad/Taller2_nuevo/TP-8-9/tl2-tp8-2025-Maiguelon/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-pzsg3w8fhx

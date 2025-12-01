@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Cc-nta Software\\Desktop\\facultad\\Taller2_nuevo\\TP-8\\tl2-tp8-2025-Maiguelon\\tl2-tp8-2025-Maiguelon.csproj": {}
+    "C:\\Users\\Cc-nta Software\\Desktop\\facultad\\Taller2_nuevo\\TP-8-9\\tl2-tp8-2025-Maiguelon\\tl2-tp8-2025-Maiguelon.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Cc-nta Software\\Desktop\\facultad\\Taller2_nuevo\\TP-8\\tl2-tp8-2025-Maiguelon\\tl2-tp8-2025-Maiguelon.csproj": {
+    "C:\\Users\\Cc-nta Software\\Desktop\\facultad\\Taller2_nuevo\\TP-8-9\\tl2-tp8-2025-Maiguelon\\tl2-tp8-2025-Maiguelon.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Cc-nta Software\\Desktop\\facultad\\Taller2_nuevo\\TP-8\\tl2-tp8-2025-Maiguelon\\tl2-tp8-2025-Maiguelon.csproj",
+        "projectUniqueName": "C:\\Users\\Cc-nta Software\\Desktop\\facultad\\Taller2_nuevo\\TP-8-9\\tl2-tp8-2025-Maiguelon\\tl2-tp8-2025-Maiguelon.csproj",
         "projectName": "tl2-tp8-2025-Maiguelon",
-        "projectPath": "C:\\Users\\Cc-nta Software\\Desktop\\facultad\\Taller2_nuevo\\TP-8\\tl2-tp8-2025-Maiguelon\\tl2-tp8-2025-Maiguelon.csproj",
+        "projectPath": "C:\\Users\\Cc-nta Software\\Desktop\\facultad\\Taller2_nuevo\\TP-8-9\\tl2-tp8-2025-Maiguelon\\tl2-tp8-2025-Maiguelon.csproj",
         "packagesPath": "C:\\Users\\Cc-nta Software\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Cc-nta Software\\Desktop\\facultad\\Taller2_nuevo\\TP-8\\tl2-tp8-2025-Maiguelon\\obj\\",
+        "outputPath": "C:\\Users\\Cc-nta Software\\Desktop\\facultad\\Taller2_nuevo\\TP-8-9\\tl2-tp8-2025-Maiguelon\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Cc-nta Software\\AppData\\Roaming\\NuGet\\NuGet.Config"

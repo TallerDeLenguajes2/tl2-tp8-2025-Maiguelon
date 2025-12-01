@@ -7,7 +7,7 @@
 <h1 class="text-center">@ViewData["Title"]</h1>
 
 <p>
-    <a asp-action="Create" class="btn btn-primary">Crear Nuevo Presupuesto</a> 
+    <a asp-action="Create" class="btn btn-primary">Crear Nuevo Presupuesto</a>
 </p>
 
 <div class="w-50 mx-auto">
@@ -17,11 +17,11 @@
                 <th>ID</th>
                 <th>Destinatario</th>
                 <th>Fecha</th>
-                <th>Acciones</th>  @* <-- Agrega esta columna *@
+                <th>Acciones</th> 
             </tr>
         </thead>
         <tbody>
-            @foreach (var p in Model) 
+            @foreach (var p in Model)
             {
                 <tr>
                     <td>@p.IdPresupuesto</td>
@@ -31,6 +31,9 @@
                         <a asp-action="Detalle" asp-route-id="@p.IdPresupuesto" class="btn btn-sm btn-info">Detalle</a> |
                         <a asp-action="Edit" asp-route-id="@p.IdPresupuesto" class="btn btn-sm btn-warning">Editar</a> |
                         <a asp-action="Delete" asp-route-id="@p.IdPresupuesto" class="btn btn-sm btn-danger">Eliminar</a>
+                        <a asp-action="AgregarProducto" asp-route-id="@p.IdPresupuesto" class="btn btn-primary">
+                            + Agregar Producto
+                        </a>
                     </td>
                 </tr>
             }

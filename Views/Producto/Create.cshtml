@@ -1,4 +1,4 @@
-@model presupuestario.Producto // Espera un modelo vacío, solo para estructura
+@model tl2_tp8_2025_Maiguelon.ViewModels.ProductoViewModel
 
 @{
     ViewData["Title"] = "Crear Producto";
@@ -27,3 +27,7 @@
 <div>
     <a asp-action="Index">Volver al listado</a>
 </div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,4 +1,4 @@
-@model presupuestario.Producto
+@model tl2_tp8_2025_Maiguelon.ViewModels.ProductoViewModel
 
 @{
     ViewData["Title"] = "Editar Producto";
@@ -12,13 +12,15 @@
     <input type="hidden" asp-for="IdProducto" />
 
     <div class="form-group">
-        <label asp-for="Descripcion"></label>
+        <label asp-for="Descripcion" class="control-label"></label>
         <input asp-for="Descripcion" class="form-control" />
+        <span asp-validation-for="Descripcion" class="text-danger"></span> 
     </div>
 
     <div class="form-group">
-        <label asp-for="Precio"></label>
+        <label asp-for="Precio" class="control-label"></label>
         <input asp-for="Precio" class="form-control" />
+        <span asp-validation-for="Precio" class="text-danger"></span>
     </div>
 
     <div class="form-group mt-3">
@@ -29,3 +31,7 @@
 <div>
     <a asp-action="Index">Volver al listado</a>
 </div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

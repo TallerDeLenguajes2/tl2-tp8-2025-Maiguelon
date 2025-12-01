@@ -1,0 +1,40 @@
+@model tl2_tp8_2025_Maiguelon.ViewModels.AgregarProductoViewModel
+
+@{
+    ViewData["Title"] = "Agregar Producto al Presupuesto";
+}
+
+<h2>Agregar Producto al Presupuesto #@Model.IdPresupuesto</h2>
+<hr />
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="AgregarProducto" method="post">
+
+            <input type="hidden" asp-for="IdPresupuesto" />
+
+            <div class="form-group mb-3">
+                <label asp-for="IdProductoSeleccionado" class="control-label"></label>
+                <select asp-for="IdProductoSeleccionado" asp-items="@Model.ListaProductos" class="form-control">
+                    <option value="">-- Seleccionar Producto --</option>
+                </select>
+                <span asp-validation-for="IdProductoSeleccionado" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Cantidad" class="control-label"></label>
+                <input asp-for="Cantidad" class="form-control" />
+                <span asp-validation-for="Cantidad" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Añadir Producto" class="btn btn-success" />
+                <a asp-action="Detalle" asp-route-id="@Model.IdPresupuesto" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
