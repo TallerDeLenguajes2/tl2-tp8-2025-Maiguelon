@@ -1,4 +1,4 @@
-namespace Rehecho.Models;
+namespace MVC.ViewModels;
 
 public class ErrorViewModel
 {
